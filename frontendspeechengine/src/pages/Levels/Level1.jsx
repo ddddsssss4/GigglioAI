@@ -4,12 +4,12 @@ import Level1Comp from "../../components/core/LevelsComp/Level1Comp"
 
 const Level1 = () => {
   return (
-    <div className='w-full'>
+    <div className='w-full bg-[#F4F4F4]'>
       <Navbar></Navbar>
 
-      <div >
+      <div className='px-16'>
         <Level1Comp></Level1Comp>
-        hello
+
       </div>
     </div>
   )

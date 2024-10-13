@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../components/common/Header/Navbar'
 import Goku from '../../components/common/Goku'
 import { GroupImage, level1Image } from '../../assets/common'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -57,7 +58,7 @@ const Home = () => {
             </div>
 
             <div className='bg-white text-base p-6 rounded-xl w-[30%]'>
-                <h1 className='text-[#5B9CF9] font-bold text-3xl' >LEVEL 01</h1>
+                <Link to={'/level1'} className='text-[#5B9CF9] font-bold text-3xl' >LEVEL 01</Link>
                 <p className='mt-4 font-semibold text-2xl '>The Power of Phonemes :</p>
                 <p className='text-xl  mt-2 font-medium text-justify'>Start your adventure by learning how to pronounce basic sounds, called phonemes! Get ready for fun challenges that help you build the foundations of language, setting you up for success as you progress through the game.</p>
             </div>
