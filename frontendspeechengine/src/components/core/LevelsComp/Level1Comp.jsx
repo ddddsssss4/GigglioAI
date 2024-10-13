@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import LevelBox from '../../common/LevelBox';
 
@@ -14,7 +13,7 @@ const Level1Comp = ({ params }) => {
   const handleClick = (letter) => {
     setClickedLetters(() => {
       const newLetters = [letter];
-      console.log(newLetters);
+      console.log("letter",newLetters);
       return newLetters;
     });
     setSelectedLetter(letter);
@@ -39,19 +38,19 @@ const Level1Comp = ({ params }) => {
 
   console.log("Updated level array: ", levelArray);
 
-  const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+  const letters = ['sssss', 'mmmm', 'eeeee', 'iiiii', 'd', 'nnnn','aaaaa'];
 
   return (
-    <div className='w-full h-screen overflow-y-auto p-4 mt-20'>
-      <h1 className='text-black text-[37px]'>
-        LEVEL 1
+    <div className="w-full h-screen overflow-y-auto p-8 mt-12 ">
+      <h1 className="text-black text-[40px] font-extrabold text-center mb-8">
+        LEVEL 1: Choose a Letter
       </h1>
-      <div className='grid grid-cols-5 gap-16 mx-auto text-black mt-4'>
+      <div className="grid grid-cols-4 gap-12 mx-auto mt-4">
         {letters.map((letter, index) => (
           <div
             key={index}
             onClick={() => { handleClick(letter); handleLevel(index); }}
-            className='px-12 py-4 gradientcolor2 flex items-center justify-center text-[50px] w-[40%] rounded-xl font-bold cursor-pointer text-center hover:opacity-70'
+            className="transform transition duration-300 ease-in-out bg-gradient-to-br from-[#3B82F6] to-[#D1C4E9]  text-white shadow-lg hover:scale-105 hover:shadow-xl hover:opacity-80 px-16 py-8 flex items-center justify-center text-[60px] w-full rounded-2xl font-bold cursor-pointer text-center"
           >
             {letter}
           </div>
@@ -61,7 +60,7 @@ const Level1Comp = ({ params }) => {
       {showDialog && (
         <LevelBox 
           closeDialog={closeDialog} 
-          letter={selectedLetter.charAt(0)} 
+          letter={selectedLetter} 
           levelArray={levelArray} 
           userid={userid}
         />
